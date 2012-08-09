@@ -11,17 +11,59 @@ $darkRed: #a22a22;
 .center{
 	text-align:center;
 }
+
+/**********************************************
+* Shadows
+**********************************************/
 .raised {
     -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     -moz-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.border{
-	border:1px solid black;
+
+.drop-shadow {
+  position:relative;
+  float:left;
+  width:40%;
+  padding:1em;
+  margin:2em 10px 4em;
+  background:#fff;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-header{
-	height:75px;
+
+.drop-shadow:before,
+.drop-shadow:after {
+  content:"";
+  position:absolute;
+  z-index:-2;
 }
+
+.drop-shadow p {
+  font-size:16px;
+  font-weight:bold;
+}
+
+.curved:before {
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:50%;
+  -webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
+  -moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
+  box-shadow:0 0 15px rgba(0,0,0,0.6);
+  -moz-border-radius:10px / 100px;
+  border-radius:10px / 100px;
+}
+
+.curved-vt-2:before {
+  right:0;
+}
+/**********************************************
+* Typography
+**********************************************/
+
 h2{
 	position: relative;
 	width: 100%;
@@ -59,6 +101,17 @@ h2:before{
 	top: 0px;
 	border-color: transparent #fff transparent transparent;
 }
+h4{
+	text-transform:uppercase;
+	color:$grayLight;
+	font-size:2em;
+	line-height:1em;
+	border-bottom:1px solid $grayLight;
+}
+
+/**********************************************
+* Links and overrides
+**********************************************/
 
 a{
 	color:$grayLight;
@@ -71,6 +124,15 @@ body{
 	background-size:100%;
 	background-repeat:no-repeat;
 }
+
+/**********************************************
+* Shadows
+**********************************************/
+
+header{
+	height:75px;
+}
+
 .logo{
 	margin-top:20px;
 	margin-bottom:20px;
@@ -128,12 +190,14 @@ footer{
 
 .blog_post{
 	margin:20px;
-	border:3px solid $grayLighter;
+	border:3px solid $grayLight;
 	background:white;
 	padding:10px;
 	margin-bottom:20px;
 }
 .blog_title{
+	font-size:2em;
+	line-height:2em;
 	margin-bottom:5px;
 	color:#a22a22;
 }
@@ -159,29 +223,31 @@ footer{
 	font-weight:bold;
 	color:$darkRed;
 	font-size:3em;
-	margin-top:-10px;
+	margin-top:10px;
 	margin-right:10px;
 	margin-bottom:3px;
 	float:left;
 }
 .who-am-i{
 	@extend .raised;
+	border:2px solid $grayLight;
+	margin-bottom:80px;
 }
 .who-am-i img{
 	z-index:9999;
 }
 .who-am-i .name{
-	position:relative;
 	font-size:20px;
 	padding-top:10px;
 	color:white;
 	background:#a22a22;
 	width:468;
 	height:30px;
-	margin-bottom:20px;
+	
 }
-.who-am-i .bio{
-	border-radius:20px;
+.bio{
+	border:2px solid $grayLight;
+	padding:10px;
 	background:white;
 	min-height:400px;
 	text-align:left;

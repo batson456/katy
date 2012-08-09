@@ -21,6 +21,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
   gem 'bootstrap-sass', '~> 2.0.4.0'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-will_paginate'
 end
 
 gem 'jquery-rails'
