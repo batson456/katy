@@ -137,6 +137,18 @@ footer{
 	img{
 		border:2px solid $grayLighter;
 	}
+	p{
+		margin-top:20px;
+	}
+}
+.post_content p:first-letter{
+	font-weight:bold;
+	color:$darkRed;
+	font-size:3em;
+	margin-top:-10px;
+	margin-right:10px;
+	margin-bottom:3px;
+	float:left;
 }
 .who-am-i img{
 	border-top-left-radius:20px;
