@@ -8,9 +8,7 @@
 	<div id="blog_view" class="span8">
 		<% if @posts.any? %>
 		<%= render 'posts' %>
-		<div style="margin-left:20px;">
 				<%= will_paginate @posts %>
-		</div>
 		<% end %>
 	</div><!-- / Main Blog View -->
 
