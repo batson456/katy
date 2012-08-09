@@ -3,6 +3,7 @@ $grayLight: #999;
 $grayLighter: #eee;
 $darkRed: #a22a22;
 @import url(http://fonts.googleapis.com/css?family=Metal+Mania);
+@import url(http://fonts.googleapis.com/css?family=Diplomata+SC);
 
 .center{
 	text-align:center;
@@ -58,14 +59,14 @@ a:hover{
 	color:black;
 }
 body{
-	background:url('background.jpeg') center center;
+	background:url('background.jpeg') bottom;
 	background-size:100%;
 	background-repeat:no-repeat;
-	background-position:0% -50px;
 }
 .logo{
 	h3{
-		font-family: 'Metal Mania', cursive;
+		font-size:2em;
+		font-family: 'Diplomata SC', cursive;
 		letter-spacing:8px;
 		a{
 			color:$darkRed;
@@ -74,6 +75,10 @@ body{
 		.subheader{
 			margin-top:-1em;
 		}
+}
+header{
+	margin-bottom:20px;
+	height:auto;
 }
 .navigation{
 	border-top:1px dashed $grayLight;
