@@ -11,6 +11,11 @@ $darkRed: #a22a22;
 .center{
 	text-align:center;
 }
+.raised {
+    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
 .border{
 	border:1px solid black;
 }
@@ -62,25 +67,23 @@ a:hover{
 	color:black;
 }
 body{
-	background:url('background.jpeg') top;
+	background:url('background.jpeg') center;
 	background-size:100%;
 	background-repeat:no-repeat;
 }
 .logo{
 	margin-top:20px;
 	margin-bottom:20px;
+	border-bottom:15px solid $darkRed;
 	h3{
 		font-size:2em;
-		font-family: 'Diplomata SC', cursive;
 		letter-spacing:8px;
+		text-transform:uppercase;
 		a{
-			color:$darkRed;
+			color:$grayLight;
+			line-height:2.5em;
 		}
 	}
-		.subheader{
-			font-style:italic;
-			margin-left:10px;
-		}
 }
 header{
 	margin-bottom:20px;
@@ -125,7 +128,7 @@ footer{
 
 .blog_post{
 	margin:20px;
-	border:2px solid $grayLighter;
+	border:3px solid $grayLighter;
 	background:white;
 	padding:10px;
 	margin-bottom:20px;
@@ -161,16 +164,15 @@ footer{
 	margin-bottom:3px;
 	float:left;
 }
+.who-am-i{
+	@extend .raised;
+}
 .who-am-i img{
-	border-top-left-radius:20px;
-	border-top-right-radius:20px;
 	z-index:9999;
 }
 .who-am-i .name{
 	position:relative;
 	font-size:20px;
-	border-bottom-right-radius:20px;
-	border-bottom-left-radius:20px;
 	padding-top:10px;
 	color:white;
 	background:#a22a22;
