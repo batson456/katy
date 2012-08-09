@@ -1,31 +1,29 @@
 <div class="container">
 	<!-- Main View -->
-<div class="row">
+	<div class="row">
 
+		<!-- Main Blog View -->
+		<div id="blog_view" class="span8">
+			<% if @posts.any? %>
+			<%= render 'posts' %>
+					<%= will_paginate @posts %>
+			<% end %>
+		</div><!-- / Main Blog View -->
 
-
-	<!-- Main Blog View -->
-	<div id="blog_view" class="span8">
-		<% if @posts.any? %>
-		<%= render 'posts' %>
-				<%= will_paginate @posts %>
-		<% end %>
-	</div><!-- / Main Blog View -->
-
-	<!-- Sidebar -->
-	<div class="span4 hidden-phone">
-		
-		<div id="blog_sidebar">
-			<div class="who-am-i">
-					<%= image_tag('who-am-i.jpeg') %>
-					<div class="name">Katy Milstead</div>
-			</div>
-			<div class="bio">
-					<h4>About Me</h4>
+		<!-- Sidebar -->
+		<div class="span4 hidden-phone">
+			
+			<div id="blog_sidebar">
+				<div class="who-am-i">
+						<%= image_tag('who-am-i.jpeg') %>
+						<div class="name">Katy Milstead</div>
 				</div>
-		</div>
+				<div class="bio">
+						<h4>About Me</h4>
+					</div>
+			</div>
 
 	</div><!-- / Sidebar -->
 
-</div><!-- / Main View -->
+	</div><!-- / Main View -->
 </div>
