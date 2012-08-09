@@ -20,7 +20,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'bootstrap-sass', '~> 2.0.4.0'
-  gem 'bootstrap-will_paginate'
+  gem 'will_paginate-bootstrap'
   gem 'uglifier', '>= 1.0.3'
 end
 
