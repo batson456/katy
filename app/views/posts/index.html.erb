@@ -8,7 +8,11 @@
 	<div id="blog_view" class="span8">
 		<% if @posts.any? %>
 		<%= render 'posts' %>
-		<%= will_paginate @posts %>
+		<div class="row">
+			<div class="span8">
+				<%= will_paginate @posts %>
+			</div>
+		</div>
 		<% end %>
 	</div><!-- / Main Blog View -->
 
