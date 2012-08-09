@@ -2,6 +2,9 @@ $gray: #555;
 $grayLight: #999;
 $grayLighter: #eee;
 $darkRed: #a22a22;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
 @import url(http://fonts.googleapis.com/css?family=Metal+Mania);
 @import url(http://fonts.googleapis.com/css?family=Diplomata+SC);
 
@@ -59,11 +62,13 @@ a:hover{
 	color:black;
 }
 body{
-	background:url('background.jpeg') bottom;
+	background:url('background.jpeg') top;
 	background-size:100%;
 	background-repeat:no-repeat;
 }
 .logo{
+	margin-top:20px;
+	margin-bottom:20px;
 	h3{
 		font-size:2em;
 		font-family: 'Diplomata SC', cursive;
@@ -73,7 +78,8 @@ body{
 		}
 	}
 		.subheader{
-			margin-top:-1em;
+			font-style:italic;
+			margin-left:10px;
 		}
 }
 header{
@@ -115,10 +121,9 @@ footer{
 .new_post{
 	text-align:center;
 }
-#blog_view{
-	padding-left:60px;
-}
+
 .blog_post{
+	margin:20px;
 	border:1px solid $grayLighter;
 	background:white;
 	padding:10px;
@@ -138,7 +143,7 @@ footer{
 	margin:10px 0 10px 0;
 	line-height:1.8em;
 	padding-bottom:10px;
-	font-size:12px;
+	font-size:1.2em;
 	img{
 		border:2px solid $grayLighter;
 	}

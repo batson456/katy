@@ -1,9 +1,9 @@
-
-<!-- Main View -->
+<div class="container">
+	<!-- Main View -->
 <div class="row">
 
 	<!-- Sidebar -->
-	<div class="four columns hide-for-small">
+	<div class="span4 hidden-phone">
 		
 		<div id="blog_sidebar">
 			<div class="who-am-i">
@@ -18,7 +18,7 @@
 	</div><!-- / Sidebar -->
 
 	<!-- Main Blog View -->
-	<div id="blog_view" class="eight columns">
+	<div id="blog_view" class="span8">
 		<% if @posts.any? %>
 		<%= render 'posts' %>
 		<%= will_paginate @posts %>
@@ -26,3 +26,4 @@
 	</div><!-- / Main Blog View -->
 
 </div><!-- / Main View -->
+</div>

@@ -2,13 +2,13 @@
 
 	<div class="blog_post"><!-- Begin Blog Post -->
 		<div class="row">
-			<div class="four columns">
+			<div class="span4">
 				<h2>
 					<%= time_ago_in_words(post.created_at) %>
 				</h2>
 			</div>
 
-			<div class="eight columns">
+			<div class="span8">
 				<h5 class="blog_title"><%= post.title %></h5>	
 			</div>
 
@@ -19,7 +19,7 @@
 			<p><%= truncate(post.content, :length => 800) %></p>
 		</div>	
 
-		<button class="tiny round alert button">+ Continue Reading</button>
+		<button class="btn-small btn-danger">+ Continue Reading</button>
 
 	</div><!-- /Blog Post -->
 
