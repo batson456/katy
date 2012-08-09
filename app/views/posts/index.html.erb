@@ -21,7 +21,7 @@
 	<div id="blog_view" class="span8">
 		<% if @posts.any? %>
 		<%= render 'posts' %>
-		<%= will_paginate @posts %>
+		<%= will_paginate @posts, :renderer => BootstrapPagination::Rails %>
 		<% end %>
 	</div><!-- / Main Blog View -->
 
