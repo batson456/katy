@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Katy Aftermath" %></title>
   
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
@@ -24,6 +24,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= yield %>
+		<div class="row">
+				<div class="logo">
+					<h3><%= link_to 'Katy Aftermath', '/' %></h3>
+					<h5 class="subheader">Katy Milstead's Blog</h5>
+				</div>
+		</div>
+
+		<div class="row">
+			<ul class="navigation">
+				<li><%= link_to 'Home', '/' %></li>
+				<li><%= link_to 'About', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+			</ul>
+		</div>
+
+	<!-- Begin Content -->
+  	<%= yield %>
+  
+  <div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="six columns"><h5>Archives</h5></div>
+				<div class="six columns"><h5>About</h5></div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		&copy;2012 <?= anchor('site/index','Bryce Batson'); ?> All Rights Reserved
+	</footer>
 </body>
 </html>

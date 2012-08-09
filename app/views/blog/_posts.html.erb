@@ -2,21 +2,26 @@
 
 	<% @posts.each do |post| %>
 
-		<div class="row blog_post">
-			<div class="blog_title">
-				<%= image_tag('gas-mask-title.jpg', class: 'title_image') %>
-				<h3 class="blog_title"><%= post.title %></h3>	
-			</div>
+		<div class="blog_post">
+			<div class="row">
+				<div class="four columns">
+					<h2>
+						<%= time_ago_in_words(post.created_at) %>
+					</h2>
+				</div>
 
-			<div class="date">
-				<%= post.created_at %>
+				<div class="eight columns">
+					<h5 class="blog_title"><%= post.title %></h5>	
+				</div>
+
 			</div>
 
 			<div class="post_content">
+				<%= image_tag('cartoon.jpeg') %>
 				<%= post.content %>
 			</div>	
 
-			<button class="btn btn-danger pull-right btn-small">+ Continue Reading</button>
+			<button class="tiny round alert button">+ Continue Reading</button>
 
 		</div>
 

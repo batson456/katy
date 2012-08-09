@@ -1,4 +1,8 @@
 Katy::Application.routes.draw do
+  get "static_pages/about"
+
+  get "static_pages/contact"
+
   root :to => 'blog#index'
 
   get "blog/show"

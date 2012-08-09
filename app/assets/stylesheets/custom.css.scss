@@ -1,14 +1,97 @@
-@import 'bootstrap.min.css';
+$gray: #555;
+$grayLight: #999;
+$grayLighter: #eee;
+$darkRed: #a22a22;
+@import url(http://fonts.googleapis.com/css?family=Metal+Mania);
+
+.center{
+	text-align:center;
+}
+.border{
+	border:1px solid black;
+}
+header{
+	height:75px;
+}
+h2{
+	position: relative;
+	width: 100%;
+	font-size: 0.9em;
+	font-weight: bold;
+	padding: 6px 20px 6px 20px;
+	margin: 10px 10px 10px -30px;
+	color: white;
+	background-color: $darkRed;
+	text-shadow: 0px 1px 2px #bbb;
+	-webkit-box-shadow: 0px 2px 4px #888;
+	-moz-box-shadow: 0px 2px 4px #888;
+	box-shadow: 0px 2px 4px #888;
+}
+
+h2:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 #666 transparent transparent;
+}
+
+
+h2:before{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -25px;
+	top: 0px;
+	border-color: transparent #fff transparent transparent;
+}
+
+a{
+	color:$grayLight;
+}
+a:hover{
+	color:black;
+}
 body{
-	background-color:#f4f4ec;
-	background:url('../img/background.jpeg') #f4f4ec;
+	background:url('background.jpeg') center center;
 	background-size:100%;
 	background-repeat:no-repeat;
 	background-position:0% -50px;
 }
-.content{
-	margin-top:375px;
+.logo{
+	h3{
+		font-family: 'Metal Mania', cursive;
+		letter-spacing:8px;
+		a{
+			color:$darkRed;
+		}
+	}
+		.subheader{
+			margin-top:-1em;
+		}
 }
+.navigation{
+	border-top:1px dashed $grayLight;
+	border-bottom:1px dashed $grayLight;
+	width:100%;
+	height:60px;
+	text-align:left;
+	margin-top:0px;
+	background:transparent;
+	li{
+		display:inline-block;
+		height:60px;
+		width:100px;
+		line-height:60px;
+		border:none;
+	}
+}
+
 footer{
 	text-align:center;
 	padding:20px;
@@ -27,11 +110,13 @@ footer{
 .new_post{
 	text-align:center;
 }
-
+#blog_view{
+	padding-left:60px;
+}
 .blog_post{
+	border:1px solid $grayLighter;
 	background:white;
 	padding:10px;
-	border-radius:20px;
 	margin-bottom:20px;
 }
 .blog_title{
@@ -43,14 +128,15 @@ footer{
 	margin-right:10px;
 	float:left;
 }
+
 .post_content{
 	margin:10px 0 10px 0;
 	line-height:1.8em;
 	padding-bottom:10px;
 	font-size:12px;
-}
-.post_content img{
-	width:175px;
+	img{
+		border:2px solid $grayLighter;
+	}
 }
 .who-am-i img{
 	border-top-left-radius:20px;
@@ -116,8 +202,10 @@ footer{
 	background:#a22a22;
 	color:white;
 }
-.home-icon{
-	position:fixed;
-	top:0;
-	right:0;
+
+.headline1 {
+	border-top:1px dashed $grayLight;
+	border-bottom: 1px dashed $grayLight;
+	padding:3px;
+	font-size:1.0em;
 }

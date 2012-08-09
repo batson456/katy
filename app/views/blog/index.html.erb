@@ -1,6 +1,19 @@
 
 
 <div class="row">
+	<!-- Sidebar -->
+	<div class="four columns hide-for-small">
+		<div id="blog_sidebar">
+			<div class="who-am-i">
+				<%= image_tag('who-am-i.jpeg') %>
+				<div class="name">Katy Milstead</div>
+				<div class="bio">
+					<h5 class="headline1">Tags</h5>
+				</div>
+			</div>
+		</div>
+	</div><!-- / Sidebar -->
+
 	<!-- Main Blog View -->
 	<div id="blog_view" class="eight columns">
 		<% if @posts.any? %>
@@ -9,16 +22,4 @@
 		<% end %>
 	</div><!-- / Main Blog View -->
 
-	<!-- Sidebar -->
-	<div class="four columns">
-		<div id="blog_sidebar">
-			<div class="who-am-i">
-				<%= image_tag('who-am-i.jpeg') %>
-				<div class="name">Katy Milstead</div>
-				<div class="bio">
-					<h3 class="bio_title">Biography:</h3>
-				</div>
-			</div>
-		</div>
-	</div><!-- / Sidebar -->
 </div>
