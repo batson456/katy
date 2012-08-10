@@ -1,4 +1,29 @@
-<p id="notice"><%= notice %></p>
-<h1><%= @post.title %></h1>
-<h4><%= @post.created_at %></h4>
-<p><%= @post.content %></p>
+	
+	<div class="blog_post"><!-- Begin Blog Post -->
+			<div class="row">
+				<p id="notice"><%= notice %></p>
+				<div class="span4">
+					<h2>
+						<%= time_ago_in_words(@post.created_at) %> ago
+					</h2>
+				</div>
+				<div class="span3">
+					<ul class="additional_info">
+						<li><i class="icon-comment"></i> 10 Comments</li>
+						<li><i class="icon-tag"></i> Tagged Under : </li>
+					</ul>
+				</div>
+
+				<div class="span8">
+					<h5 class="blog_title"><%= @post.title %></h5>	
+				</div>
+
+			</div>
+
+			<div class="post_content">
+				<%= image_tag('cartoon.jpeg') %>
+				<%= raw @post.content %>
+			</p>
+			</div>	
+
+		</div><!-- /Blog Post -->

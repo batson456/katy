@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    require "html_truncator"
   	@posts = Post.paginate(:page => params[:page],:per_page => 3).order('created_at DESC')
 
   	respond_to do |format|

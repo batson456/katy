@@ -223,12 +223,13 @@ footer{
 	font-size:1.2em;
 	img{
 		border:2px solid $grayLighter;
+		margin-bottom:20px;
 	}
 	p{
 		margin-top:20px;
 	}
 }
-.post_content p:first-letter{
+.post_content p:first-child:first-letter{
 	font-weight:bold;
 	color:$darkRed;
 	font-size:3em;

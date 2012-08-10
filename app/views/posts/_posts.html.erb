@@ -22,10 +22,11 @@
 
 		<div class="post_content">
 			<%= image_tag('cartoon.jpeg') %>
-			<p><%= truncate(post.content, :length => 800) %></p>
+			<%= raw HTML_Truncator.truncate(post.content, 200) %>
+		</p>
 		</div>	
 
-		<button class="btn-small btn-danger">+ Continue Reading</button>
+		<%= link_to '+ Continue Reading', post, :class => 'btn btn-danger' %>
 
 	</div><!-- /Blog Post -->
 
