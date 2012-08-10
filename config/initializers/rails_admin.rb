@@ -56,9 +56,11 @@ RailsAdmin.config do |config|
   config.model Post do
     edit do
       field :title
-      field :image do
-        :allowed_styles => [:original],
-        :view_mode => "list"
+      field :image, :rich_picker do
+        config({
+          :allowed_styles => [:original],
+          :view_mode => "list"
+        })
       end
       field :content, :rich_editor do
          config({ 
