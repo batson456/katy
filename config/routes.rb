@@ -1,4 +1,7 @@
 Katy::Application.routes.draw do
+  match 'admin' => 'posts#new'
+  resources :posts
+
   get "static_pages/about"
 
   get "static_pages/contact"
