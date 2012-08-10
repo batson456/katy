@@ -24,7 +24,7 @@
 			<% unless post.image.blank? %>
 				<%= image_tag(post.image) %>
 			<% end %>
-			<%= raw HTML_Truncator.truncate(post.content, 200) %>
+			<%= raw HTML_Truncator.truncate(post.content, 125) %>
 		</p>
 		</div>	
 
