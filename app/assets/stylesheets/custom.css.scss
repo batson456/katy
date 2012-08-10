@@ -1,12 +1,11 @@
 $gray: #555;
 $grayLight: #999;
 $grayLighter: #eee;
-$darkRed: #a22a22;
+$green: #7f8000;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
-@import url(http://fonts.googleapis.com/css?family=Metal+Mania);
-@import url(http://fonts.googleapis.com/css?family=Diplomata+SC);
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 .center{
 	text-align:center;
@@ -72,7 +71,7 @@ h2{
 	padding: 6px 20px 6px 20px;
 	margin: 10px 10px 10px -30px;
 	color: white;
-	background-color: $darkRed;
+	background-color: $green;
 	text-shadow: 0px 1px 2px #bbb;
 	-webkit-box-shadow: 0px 2px 4px #888;
 	-moz-box-shadow: 0px 2px 4px #888;
@@ -133,33 +132,32 @@ body{
 * Navigation
 **********************************************/
 
-header{
+#header{
 	@extend .raised;
-	height:75px;
-	background:$darkRed;
+	background:black;
+	margin-bottom:30px;
 }
 
 .logo{
-	background:$darkRed;
-	text-align:center;
-	margin-top:20px;
-	margin-bottom:20px;
-	h3{
-		font-family: 'Metal Mania', cursive;
-		font-size:2em;
-		letter-spacing:8px;
-		text-transform:uppercase;
-		a{
-			color:white;
-			line-height:2.5em;
-		}
+	width:20em;
+}
+
+.katy_aftermath{
+	font-family: 'Anonymous Pro', sans-serif;
+	.logo_name{
+		color:white;
+		font-size:4em;
+		line-height:2em;
+	}
+	.sub_header{
+		font-style:italic;
+		font-size:1.5em;
+		line-height:0.75em;
+		margin-top:-1em;
+		color:white;
 	}
 }
 
-header{
-	margin-bottom:30px;
-	height:auto;
-}
 .navigation{
 	border-top:1px dashed $grayLight;
 	border-bottom:1px dashed $grayLight;
@@ -168,13 +166,7 @@ header{
 	text-align:left;
 	margin-top:0px;
 	background:transparent;
-	li{
-		display:inline-block;
-		height:60px;
-		width:100px;
-		line-height:60px;
-		border:none;
-	}
+	
 }
 
 footer{
@@ -207,10 +199,10 @@ footer{
 }
 .blog_title{
 	font-size:1.3em;
-	border-bottom:2px solid $darkRed;
+	border-bottom:2px solid $green;
 	line-height:2em;
 	margin-bottom:5px;
-	color:#a22a22;
+	color:$green;
 }
 .title_image{
 	width:25px;
@@ -233,7 +225,7 @@ footer{
 }
 .post_content p:first-child:first-letter{
 	font-weight:bold;
-	color:$darkRed;
+	color:$green;
 	font-size:3em;
 	margin-top:10px;
 	margin-right:10px;
@@ -257,7 +249,7 @@ footer{
 	font-size:20px;
 	padding-top:10px;
 	color:white;
-	background:#a22a22;
+	background:$green;
 	width:468;
 	height:30px;
 	
@@ -278,8 +270,8 @@ footer{
 	}
 }
 .bio_title{
-	border-bottom:1px solid #a22a22;
-	color:#a22a22;
+	border-bottom:1px solid $green;
+	color:$green;
 	margin-bottom:20px;
 }
 
