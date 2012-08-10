@@ -56,6 +56,10 @@ RailsAdmin.config do |config|
   config.model Post do
     edit do
       field :title
+      field :image do
+        :allowed_styles => [:original],
+        :view_mode => "list"
+      end
       field :content, :rich_editor do
          config({ 
            :insert_many => true 
