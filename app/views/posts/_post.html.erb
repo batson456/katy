@@ -21,7 +21,9 @@
 			</div>
 
 			<div class="post_content">
-				<%= image_tag('cartoon.jpeg') %>
+				<% unless @post.image.blank? %>
+					<%= image_tag(@post.image) %>
+				<% end %>
 				<%= raw @post.content %>
 			</p>
 			</div>	
