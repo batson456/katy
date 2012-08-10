@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
 gem 'will_paginate', '~> 3.0'
-gem 'tinymce-rails'
 gem "html_truncator", "~>0.2"
 
 # Bundle edge Rails instead:

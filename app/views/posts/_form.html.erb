@@ -16,10 +16,7 @@
 	<%= f.text_field :title %>
 
 	<%= f.label :content %>
-	<%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120, :name => 'post[content]' %>
-
-	<br>
-	<%= tinymce %>
+	
 
 	<%= f.submit 'Post', class: 'btn btn-danger' %>
 <% end %>
