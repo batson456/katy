@@ -51,7 +51,19 @@ RailsAdmin.config do |config|
   #     end
   #   end
   # end
-  #
+  
+  # Initialize ckeditor with admin interface
+  config.model Post do
+    edit do
+      field :title
+      field :content, :rich_editor do
+         config({ 
+           :insert_many => true 
+         })
+      end
+    end
+  end
+
   #  ==> Model specific configuration
   # Keep in mind that *all* configuration blocks are optional.
   # RailsAdmin will try his best to provide the best defaults for each section, for each field.
