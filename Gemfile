@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.7'
 gem 'will_paginate', '~> 3.0'
 gem "html_truncator", "~>0.2"
+gem 'rails_admin'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -44,3 +46,6 @@ gem 'jquery-rails'
 group :production do
 	gem 'pg'
 end
+
+
+gem "devise"
