@@ -24,34 +24,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="row">
-					<div class="span12">
-						<div class="logo">
-							<h3><%= link_to '// Katy Aftermath', '/' %></h3>
+
+		<header>
+			<div class="container">
+				<div class="row">
+						<div class="span12">
+							<div class="logo">
+								<h3><%= link_to 'Katy Aftermath', '/' %></h3>
+							</div>
+
 						</div>
-					</div>
+				</div>
 			</div>
+
+		</header>
+
+		<!-- Begin Content -->
+	  	<%= yield %>
+	  
+	  <div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="six columns"><h5>Archives</h5></div>
+					<div class="six columns"><h5>About</h5></div>
+				</div>
+			</div>
+
 		</div>
 
-	</header>
+		<footer>
+			&copy;2012 <?= anchor('site/index','Bryce Batson'); ?> All Rights Reserved
+		</footer>
 
-	<!-- Begin Content -->
-  	<%= yield %>
-  
-  <div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="six columns"><h5>Archives</h5></div>
-				<div class="six columns"><h5>About</h5></div>
-			</div>
-		</div>
-
-	</div>
-
-	<footer>
-		&copy;2012 <?= anchor('site/index','Bryce Batson'); ?> All Rights Reserved
-	</footer>
 </body>
 </html>
