@@ -1,13 +1,13 @@
 Katy::Application.routes.draw do
-  mount Rich::Engine => '/rich', :as => 'rich'
-
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  devise_for :users
 
   
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   match 'admin' => 'posts#new'
+  
   resources :posts
 
   get "static_pages/about"
