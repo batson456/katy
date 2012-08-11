@@ -1,7 +1,10 @@
-$gray: #555;
+$gray: #151515;
 $grayLight: #999;
 $grayLighter: #eee;
-$green: #7f8000;
+$green: #43442b;
+$darkOrange: #F2A000;
+$dark:#6a6a68;
+$red:#A92F41;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -63,50 +66,6 @@ $green: #7f8000;
 * Typography
 **********************************************/
 
-h2{
-	position: relative;
-	width: 100%;
-	font-size: 0.9em;
-	font-weight: bold;
-	padding: 6px 20px 6px 20px;
-	margin: 10px 10px 10px -30px;
-	color: white;
-	background-color: $green;
-	text-shadow: 0px 1px 2px #bbb;
-	-webkit-box-shadow: 0px 2px 4px #888;
-	-moz-box-shadow: 0px 2px 4px #888;
-	box-shadow: 0px 2px 4px #888;
-}
-
-h2:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 0px;
-	top: 100%;
-	border-width: 5px 10px;
-	border-style: solid;
-	border-color: #666 #666 transparent transparent;
-}
-
-
-h2:before{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	right: -25px;
-	top: 0px;
-	border-color: transparent #fff transparent transparent;
-}
-h4{
-	text-transform:uppercase;
-	color:$grayLight;
-	font-size:2em;
-	line-height:1em;
-	border-bottom:1px solid $grayLight;
-}
 
 /**********************************************
 * Links and overrides
@@ -132,12 +91,18 @@ body{
 	border:1px solid black;
 }
 
+.content{
+	border-radius:20px;
+	padding:30px 0 30px 0;
+	background:url('stucco.png');
+}
+
 /**********************************************
-* Navigation
+* header
 **********************************************/
 
 #header{
-	@extend .raised;
+	color:$grayLighter;
 	background:transparent;
 	margin-bottom:30px;
 }
@@ -153,45 +118,43 @@ body{
 	padding-top:5em;
 	.logo_name{
 		height:100%;
-		color:white;
 		font-size:3em;
 		line-height:1em;
 	}
 	.sub_header{
+		text-shadow:3px 3px $dark;
 		font-style:italic;
 		font-size:1.5em;
 		line-height:0.75em;
 		margin-top:-1em;
-		color:white;
 	}
 }
-
-.nav{
-	margin-bottom:30px;
-	display:block;
-	height:75px;
-	li{
-		text-align:center;
-		a{
-			line-height:75px;
-			font-size:1.8em;
-			color:white;
-			display:block;
-			margin:0 auto;
-			@extend .raised;
-			width:150px;
-			height:75px;
-		}
-		a:hover{
-			background:none;
-		}
-	}
+#footer{
+	margin-bottom:0;
+	color:$grayLight;
+	min-height:150px;
+	margin-top:40px;
+	background:url('footerbg.jpeg') bottom center no-repeat;
+	background-size:100%;
 }
-
-footer{
+#footer_content{
 	text-align:center;
+	ul{
+		margin:0 auto;
+		li{
+			display:inline-block;
+			font-size:1.4em;
+			width:75px;
+			a:hover{
+				color:$grayLighter;
+				text-decoration:none;
+			}
+		}
+	}
+}
+#footer_bottom{
 	padding:20px;
-	border-top:1px dashed #ccc;
+	text-align:center;
 }
 #header{
 	padding:20px;
@@ -200,61 +163,51 @@ footer{
 /**********************************************
 * Blog and related views
 **********************************************/
-
-#blog_sidebar{
-	text-align:center;
-}
-
-.blog_post{
-	border:1px solid $grayLight;
-	background:url('stucco.png');
-	padding:10px;
-	margin-bottom:30px;
-	.additional_info{
-		list-style:none;
-		margin-top: 10px;
-		float:right;
-	}
+.blog_title,.post{
+	margin-left:20px;
+	color:$grayLight;
 }
 .blog_title{
-	font-size:1.3em;
-	border-bottom:2px solid $green;
-	line-height:2em;
-	margin-bottom:5px;
-	color:$green;
-}
-.title_image{
-	width:25px;
-	margin-right:10px;
-	float:left;
+	font-size:2em;
 }
 
-.post_content{
+#blog_post{
+	margin-left:0;
+	min-height:1000px;
+	padding-right:19px;
+	margin-right:0;
+	border-right:1px dashed $grayLight;
+}
+
+.post_info{
 	margin:10px 0 10px 0;
-	line-height:1.8em;
-	padding-bottom:10px;
-	font-size:1.2em;
-	img{
-		border:2px solid $grayLighter;
-		margin-bottom:20px;
-	}
-	p{
-		margin-top:20px;
+	font-size:1em;
+	padding:4px 59px 0px 20px;
+	line-height: 1.94em;
+	height:32px;
+	background:url('post_info_bg.png') no-repeat;
+}
+.post{
+	color:$grayLight;
+	font-size:1.3em;
+	line-height:2em;
+	.title_image{
+		width:100%;
+		margin-bottom:30px;
 	}
 }
-.post_content p:first-child:first-letter{
-	font-weight:bold;
-	color:$green;
-	font-size:3em;
-	margin-top:10px;
-	margin-right:10px;
-	margin-bottom:3px;
-	float:left;
+.end_post{
+	margin-bottom:60px;
 }
 
 /**********************************************
 * Sidebar
 **********************************************/
+
+#blog_sidebar{
+	text-align:center;
+	margin-right:30px;
+}
 
 .who-am-i{
 	@extend .raised;
@@ -266,15 +219,15 @@ footer{
 }
 .who-am-i .name{
 	font-size:20px;
-	padding-top:10px;
+	line-height:20px;
+	margin-top:-30px;
 	color:white;
-	background:$green;
-	width:468;
+	background:$dark;
+	opacity:0.7;
 	height:30px;
 	
 }
 .bio{
-	border:2px solid $grayLight;
 	padding:10px;
 	background:url('stucco.png');
 	min-height:400px;

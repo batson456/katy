@@ -1,14 +1,13 @@
 <div class="container">
 	<!-- Main View -->
-	<div class="row">
+	<div class="row content">
 
 		<!-- Main Blog View -->
-		<div id="blog_view" class="span8">
-			<% if @posts.any? %>
+		<% if @posts.any? %>
 			<%= render 'posts' %>
-					<%= will_paginate @posts %>
-			<% end %>
-		</div><!-- / Main Blog View -->
+			<%= will_paginate @posts %>
+		<% end %>
+		<!-- / Main Blog View -->
 
 		<%= render 'sidebar' %>
 
