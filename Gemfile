@@ -7,6 +7,7 @@ gem "html_truncator", "~>0.2"
 gem 'activeadmin'
 gem "ckeditor", "3.7.1"
 gem 'paperclip'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
