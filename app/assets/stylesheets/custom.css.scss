@@ -3,7 +3,7 @@ $grayLight: #999;
 $grayLighter: #eee;
 $green: #43442b;
 $darkOrange: #F2A000;
-$dark:#6a6a68;
+$dark:#292929;
 $red:#A92F41;
 
 @import "bootstrap";
@@ -92,9 +92,8 @@ body{
 }
 
 .content{
-	border-radius:20px;
 	padding:30px 0 30px 0;
-	background:url('stucco.png');
+	background:white;
 }
 
 /**********************************************
@@ -164,19 +163,34 @@ body{
 * Blog and related views
 **********************************************/
 .blog_title,.post{
-	margin-left:20px;
-	color:$grayLight;
+	color:$green;
 }
 .blog_title{
 	font-size:2em;
 }
-
+.blog_title{
+	padding-left:20px;
+	margin-right:-20px;
+	height:65px;
+	line-height:65px;
+	background:url('postflag.png') top right no-repeat;
+	border-top:1px solid $grayLighter;
+}
+.post_wrapper{
+	padding-right:20px;
+	margin-bottom:50px;
+	position:relative;
+	.date{
+		top:0;
+		background:white;
+		position:absolute;
+		height:75px;
+		width:75px;
+	}
+}
 #blog_post{
-	margin-left:0;
 	min-height:1000px;
-	padding-right:19px;
-	margin-right:0;
-	border-right:1px dashed $grayLight;
+
 }
 .pagination{
 	margin:0 auto;
@@ -185,6 +199,7 @@ body{
 .post_info{
 	margin:10px 0 10px 0;
 	font-size:1em;
+	margin-left:-30px;
 	padding:4px 59px 0px 20px;
 	line-height: 1.94em;
 	height:32px;
@@ -195,6 +210,7 @@ body{
 	font-size:1.3em;
 	line-height:2em;
 	.title_image{
+		margin-right:20px;
 		width:100%;
 		margin-bottom:30px;
 	}
@@ -215,7 +231,7 @@ body{
 .who-am-i{
 	@extend .raised;
 	border:2px solid $grayLight;
-	margin-bottom:80px;
+	margin-bottom:20px;
 }
 .who-am-i img{
 	z-index:9999;
@@ -231,8 +247,8 @@ body{
 	
 }
 .bio{
+	color: $grayLight;
 	padding:10px;
-	background:url('stucco.png');
 	min-height:400px;
 	text-align:left;
 	img{

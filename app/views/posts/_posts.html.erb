@@ -1,7 +1,7 @@
 <div id="blog_post" class="span8">
 
 		<% @posts.each do |post| %>
-					
+			<div class="post_wrapper">				
 				<h3 class="blog_title"><%= post.title %></h3>
 
 				<div class="post_info">
@@ -17,12 +17,11 @@
 					</div>
 				</div>
 
-				<%= link_to 'Continue Reading', post, :class => 'btn btn-small pull-right btn-inverse' %>
+				<%= link_to 'Continue Reading', post, :class => 'btn btn-small btn-inverse' %>
 
-				<div class="end_post"></div>
+			</div>
 
 		<% end %>
-		<div class="pagination">
 			<%= will_paginate @posts %>
-		</div>	
+	
 </div>

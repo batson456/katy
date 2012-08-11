@@ -1,14 +1,8 @@
-<div class="container">
-	<!-- Main View -->
-	<div class="row content">
+<!-- Main Blog View -->
+<% if @posts.any? %>
+	<%= render 'posts' %>
+<% end %>
+<!-- / Main Blog View -->
 
-		<!-- Main Blog View -->
-		<% if @posts.any? %>
-			<%= render 'posts' %>
-		<% end %>
-		<!-- / Main Blog View -->
+<%= render 'sidebar' %>
 
-		<%= render 'sidebar' %>
-
-	</div><!-- / Main View -->
-</div>

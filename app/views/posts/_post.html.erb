@@ -1,31 +1,22 @@
-	
-	<div class="blog_post"><!-- Begin Blog Post -->
-			<div class="row">
-				<p id="notice"><%= notice %></p>
-				<div class="span4">
-					<h2>
-						<%= time_ago_in_words(@post.created_at) %> ago
-					</h2>
-				</div>
-				<div class="span3">
-					<ul class="additional_info">
-						<li><i class="icon-comment"></i> 10 Comments</li>
-						<li><i class="icon-tag"></i> Tagged Under : </li>
-					</ul>
+<div id="blog_post" class="span8">
+
+			<div class="post_wrapper">
+				
+				<h3 class="blog_title"><%= @post.title %></h3>
+
+				<div class="post_info">
+					Posted <%= time_ago_in_words(@post.created_at) %> ago in <span class="category">Movies</span> | <i class="icon-comment"></i> 10 comments 
 				</div>
 
-				<div class="span8">
-					<h5 class="blog_title"><%= @post.title %></h5>	
+				<div class="post">
+					<% unless @post.image.blank? %>
+						<%= image_tag(@post.image, :class => 'title_image') %>
+					<% end %>
+					<div class="post_content">
+						<%= raw @post.content %>
+					</div>
 				</div>
 
 			</div>
 
-			<div class="post_content">
-				<% unless @post.image.blank? %>
-					<%= image_tag(@post.image) %>
-				<% end %>
-				<%= raw @post.content %>
-			</p>
-			</div>	
-
-		</div><!-- /Blog Post -->
+</div>
