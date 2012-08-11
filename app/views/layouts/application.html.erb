@@ -30,7 +30,7 @@
 				<div class="row">
 						<div class="span4">
 							<div class="logo">
-									<%= image_tag 'gas-mask-header.jpeg' %>
+								&nbsp
 							</div>
 						</div>
 						<div class="span8">
@@ -44,7 +44,15 @@
 			</div>
 
 		</div>
-
+		<div class="container">
+			<div class="row">
+				<ul class="nav">
+					<li class="span4"><%= link_to 'Home', '/' %></li>
+					<li class="span4"><%= link_to 'About', '#' %></li>
+					<li class="span4"><%= link_to 'Contact', '#' %></li>
+				</ul>
+			</div>
+		</div>
 		<!-- Begin Content -->
 	  	<%= yield %>
 	  
