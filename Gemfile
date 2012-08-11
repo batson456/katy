@@ -4,6 +4,8 @@ gem 'rails', '3.2.7'
 gem 'will_paginate', '~> 3.0'
 gem "html_truncator", "~>0.2"
 gem 'activeadmin'
+gem "ckeditor", "3.7.1"
+gem 'paperclip'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
