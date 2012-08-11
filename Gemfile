@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
+gem 'bootstrap-sass', '~> 2.0.4.0'
 gem 'will_paginate', '~> 3.0'
 gem "html_truncator", "~>0.2"
 gem 'activeadmin'
@@ -23,7 +24,6 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-  gem 'bootstrap-sass', '~> 2.0.4.0'
   gem 'uglifier', '>= 1.0.3'
 end
 
