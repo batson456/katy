@@ -5,7 +5,9 @@
 				<h3 class="blog_title"><%= post.title %></h3>
 
 				<div class="post_info">
-					<%= time_ago_in_words(post.created_at) %> ago // <span class="category">Movies</span> // <i class="icon-comment"></i> 10 comments 
+					<%= time_ago_in_words(post.created_at) %> ago // <span class="category">Movies</span> // <i class="icon-comment"></i> <%= link_to "This will be replaced by the comment count", 
+    post_path(post, :anchor => "disqus_thread"), 
+    :"data-disqus-identifer" => post.id %> 
 				</div>
 
 				<div class="post">
@@ -20,8 +22,8 @@
 				<%= link_to 'MORE', post, :class => 'btn btn-small btn-inverse more-button' %>
 
 			</div>
-
 		<% end %>
 			<%= will_paginate @posts %>
 	
+			<%= raw(disqus_comment_counts) %>
 </div>

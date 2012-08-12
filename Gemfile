@@ -8,6 +8,7 @@ gem 'activeadmin'
 gem "ckeditor", "3.7.1"
 gem 'paperclip'
 gem 'devise'
+gem "disqus", "~> 1.0.4"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

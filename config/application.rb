@@ -58,5 +58,8 @@ module Katy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    Disqus::defaults[:account] = 'katyaftermath'
+    Disqus::defaults[:developer] = true # if you want to test it on the localhost
   end
 end
