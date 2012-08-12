@@ -1,4 +1,4 @@
-<div id="blog_post" class="span8">
+<div id="blog_posts" class="span8">
 
 		<% @posts.each do |post| %>
 			<div class="post_wrapper clearfix">				
@@ -12,7 +12,7 @@
 
 				<div class="post">
 					<% unless post.image.blank? %>
-						<%= image_tag(post.image, :class => 'title_image') %>
+						<%= image_tag(post.image, :class => 'title_image raised') %>
 					<% end %>
 					<div class="post_content">
 						<%= raw HTML_Truncator.truncate(post.content, 125) %>

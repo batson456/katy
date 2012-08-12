@@ -63,6 +63,12 @@ $red:#A92F41;
 .curved-vt-2:before {
   right:0;
 }
+.turnup{
+	height:9px;
+	background:url('turn-up.png') top center;
+	background-size:100%;
+	margin-bottom:20px;
+}
 /**********************************************
 * Typography
 **********************************************/
@@ -94,8 +100,8 @@ body{
 }
 
 .content{
+	background:url('lghtmesh.png');
 	padding:30px 0 30px 0;
-	background:white;
 }
 
 /**********************************************
@@ -170,14 +176,27 @@ body{
 .blog_title{
 	font-size:2em;
 }
-.blog_title{
-	height:65px;
-	line-height:65px;
-	background:url('postflag.png') 95% top  no-repeat;
-	border-top:1px solid $grayLight;
+@media (max-width: 480px) {
+	.blog_title{
+		height:20px;
+		line-height:20px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+	.blog_title{
+		height:65px;
+		line-height:65px;
+		background:url('postflag.png') 95% top  no-repeat;
+		border-top:1px solid $grayLight;
+	}
 }
 .post_wrapper{
-	padding-right:20px;
+	margin-left: 0;
+  padding-left:20px;
+  padding-right:19px;
+    border-right: 1px solid $grayLighter;
+
 	margin-bottom:50px;
 	position:relative;
 
@@ -197,7 +216,7 @@ body{
 	font-size:1.3em;
 	line-height:2em;
 	.title_image{
-		margin-right:20px;
+		@extend .raised;
 		width:100%;
 		margin-bottom:30px;
 	}
@@ -222,9 +241,8 @@ body{
 }
 
 .who-am-i{
-	@extend .raised;
-	border:2px solid $grayLight;
-	margin-bottom:20px;
+	padding:5px;
+	background:#717171;
 }
 .who-am-i img{
 	z-index:9999;
@@ -246,14 +264,22 @@ body{
 	min-height:400px;
 	text-align:left;
 	img{
+		padding:4px;
+		background:white;
 		width:50%;
 		float:left;
-		margin:5px;
+		margin-right:5px;
+		border:1px solid black;
 	}
 	p{
 		line-height:1.8em;
 	}
 }
+.turn-up-100{
+		background:url('turn-up-100.png') top center;
+		height:5px;
+		width:100px;
+	}
 .bio_title{
 	border-bottom:1px solid $green;
 	color:$green;
