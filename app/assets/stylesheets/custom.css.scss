@@ -9,6 +9,7 @@ $red:#A92F41;
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700);
 
 .center{
 	text-align:center;
@@ -82,6 +83,7 @@ a:hover{
 	color:black;
 }
 body{
+	font-family: 'Karla', sans-serif;
 	background:#000 url('background.jpeg') top center;
 	background-size:100%;
 	background-repeat:no-repeat;
@@ -169,41 +171,26 @@ body{
 	font-size:2em;
 }
 .blog_title{
-	padding-left:20px;
-	margin-right:-20px;
 	height:65px;
 	line-height:65px;
-	background:url('postflag.png') top right no-repeat;
-	border-top:1px solid $grayLighter;
+	background:url('postflag.png') 95% top  no-repeat;
+	border-top:1px solid $grayLight;
 }
 .post_wrapper{
 	padding-right:20px;
 	margin-bottom:50px;
 	position:relative;
-	.date{
-		top:0;
-		background:white;
-		position:absolute;
-		height:75px;
-		width:75px;
-	}
-}
-#blog_post{
-	min-height:1000px;
 
-}
-.pagination{
-	margin:0 auto;
 }
 
 .post_info{
-	margin:10px 0 10px 0;
-	font-size:1em;
-	margin-left:-30px;
+	text-transform:uppercase;
+	margin:10px 0 10px -20px;
+	font-size:0.9em;
 	padding:4px 59px 0px 20px;
 	line-height: 1.94em;
 	height:32px;
-	background:url('post_info_bg.png') no-repeat;
+	color:$grayLight;
 }
 .post{
 	color:$grayLight;
@@ -215,8 +202,14 @@ body{
 		margin-bottom:30px;
 	}
 }
-.end_post{
-	margin-bottom:60px;
+.more-button{
+	margin-top:30px;
+	border-bottom-left-radius:10px;
+	border-top-right-radius:10px;
+	font-size:1.3em;
+}
+.more-button:hover{
+	background:#3b3b3b;
 }
 
 /**********************************************
@@ -248,6 +241,7 @@ body{
 }
 .bio{
 	color: $grayLight;
+	font-size:1.2em;
 	padding:10px;
 	min-height:400px;
 	text-align:left;

@@ -1,11 +1,11 @@
 <div id="blog_post" class="span8">
 
 		<% @posts.each do |post| %>
-			<div class="post_wrapper">				
+			<div class="post_wrapper clearfix">				
 				<h3 class="blog_title"><%= post.title %></h3>
 
 				<div class="post_info">
-					Posted <%= time_ago_in_words(post.created_at) %> ago in <span class="category">Movies</span> | <i class="icon-comment"></i> 10 comments 
+					<%= time_ago_in_words(post.created_at) %> ago // <span class="category">Movies</span> // <i class="icon-comment"></i> 10 comments 
 				</div>
 
 				<div class="post">
@@ -17,7 +17,7 @@
 					</div>
 				</div>
 
-				<%= link_to 'Continue Reading', post, :class => 'btn btn-small btn-inverse' %>
+				<%= link_to 'MORE', post, :class => 'btn btn-small btn-inverse more-button' %>
 
 			</div>
 
