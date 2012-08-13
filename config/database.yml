@@ -23,7 +23,7 @@ production:
   encoding: utf8
   reconnect: false
   database: katy
-  pool:5
-  host:localhost
-  username:root
-  password:britney12
+  pool: 5
+  host: localhost
+  username: root
+  password: britney12
