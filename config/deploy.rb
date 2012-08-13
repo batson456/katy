@@ -2,8 +2,9 @@
 #	Application
 #############################################################
 
+set :user, "deploy"
 set :application, "katy_aftermath"
-set :deploy_to, "/var/www/#{application}"
+set :deploy_to, "/home/#{user}/public/#{application}"
 
 #############################################################
 #	Settings
@@ -16,8 +17,7 @@ set :use_sudo, false
 #	Servers
 #############################################################
 
-set :user, "deploy"
-set :domain, "katyaftermath.com"
+set :domain, "96.126.109.233"
 server domain, :app, :web
 role :db, domain, :primary => true
 
