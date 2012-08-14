@@ -11,7 +11,7 @@
 				</div>
 
 				<div class="post">
-					<% unless post.image.blank? %>
+					<% if post.image && FileTest.exists?("#{post.image}") %>
 						<%= image_tag(post.image.url(:small), :class => 'title_image') %>
 					<% end %>
 					<div class="post_content">
