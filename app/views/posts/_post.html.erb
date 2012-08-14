@@ -9,9 +9,9 @@
 				</div>
 
 				<div class="post">
-					<% unless @post.image.blank? %>
-						<%= image_tag(@post.image, :class => 'title_image') %>
-					<% end %>
+					
+						<%= link_to image_tag(@post.image, :class => 'title_image') if @post.image? %>
+		
 					<div class="post_content">
 						<%= raw @post.content %>
 					</div>
