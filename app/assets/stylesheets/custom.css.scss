@@ -212,6 +212,7 @@ body{
 	font-size:1.3em;
 	line-height:2em;
 	.title_image{
+		overflow:hidden;
 		padding-bottom:16px;
 		background:url('photo-shadow.png') bottom center no-repeat;
 		background-size:100%;
