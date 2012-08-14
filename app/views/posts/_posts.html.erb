@@ -12,7 +12,7 @@
 
 				<div class="post">
 
-						<%= link_to image_tag(post.image.url(:small), :class => 'title_image') if post.image.url? %>
+						<%= link_to image_tag(post.image.url(:small), :class => 'title_image') if post.image? %>
 
 					<div class="post_content">
 						<%= raw HTML_Truncator.truncate(post.content, 125) %>
