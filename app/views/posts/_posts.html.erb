@@ -1,3 +1,4 @@
+
 <div id="blog_posts" class="span8">
 
 		<% @posts.each do |post| %>
@@ -5,7 +6,7 @@
 				<h3 class="blog_title"><%= post.title %></h3>
 
 				<div class="post_info">
-					<%= time_ago_in_words(post.created_at) %> ago // <span class="category">Movies</span> // <i class="icon-comment"></i> <%= link_to "This will be replaced by the comment count", 
+					Posted <%= time_ago_in_words(post.created_at) %> ago // <i class="icon-comment"></i> <%= link_to "This will be replaced by the comment count", 
     post_path(post, :anchor => "disqus_thread"), 
     :"data-disqus-identifer" => post.id %> 
 				</div>

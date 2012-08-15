@@ -9,6 +9,7 @@ gem "ckeditor", "3.7.1"
 gem 'paperclip'
 gem 'devise'
 gem "disqus", "~> 1.0.4"
+gem "breadcrumbs_on_rails"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

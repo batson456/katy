@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  add_breadcrumb "HOME", :root_path
+
   def index
     require "html_truncator"
   	@posts = Post.paginate(:page => params[:page],:per_page => 3).order('created_at DESC')
@@ -11,6 +14,8 @@ class PostsController < ApplicationController
 
   def show
   	@post = Post.find(params[:id])
+
+    add_breadcrumb "POST", :post_path
 
   	respond_to do |format|
   		format.html # show.html.erb

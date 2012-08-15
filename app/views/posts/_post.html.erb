@@ -5,7 +5,7 @@
 				<h3 class="blog_title"><%= @post.title %></h3>
 
 				<div class="post_info">
-					Posted <%= time_ago_in_words(@post.created_at) %> ago in <span class="category">Movies</span> | <i class="icon-comment"></i> <%= link_to("Permalink", post_path(@post, :anchor => "disqus_thread"))%> 
+					Posted <%= time_ago_in_words(@post.created_at) %> ago // <i class="icon-comment"></i> <%= link_to("Permalink", post_path(@post, :anchor => "disqus_thread"))%> 
 				</div>
 
 				<div class="post">

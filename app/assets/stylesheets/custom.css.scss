@@ -100,6 +100,9 @@ body{
 }
 
 .content{
+	.breadcrumbs{
+		padding-left:40px;
+	}
 	.main{
 		padding-top:60px;
 	}
@@ -143,8 +146,9 @@ body{
 	}
 }
 #footer{
-	padding-top:50px;
-	background:#2D2D2D url('type2.png') top center no-repeat;
+	position:relative;
+	padding-top:30px;
+	background:#272727 url('type2.png') top center no-repeat;
 	background-size:100%;
 	width:100%;
 	margin-bottom:0;
@@ -167,6 +171,9 @@ body{
 	}
 }
 #footer_bottom{
+	width:100%;
+	position:absolute;
+	bottom:0;
 	padding:20px;
 	text-align:center;
 }
@@ -178,7 +185,7 @@ body{
 * Blog and related views
 **********************************************/
 
-.blog_title,.post{
+.blog_title{
 	color:$green;
 }
 .blog_title{
@@ -216,7 +223,7 @@ body{
 }
 .post{
 	color:$grayLight;
-	font-size:1.3em;
+	font-size:1em;
 	line-height:2em;
 	.title_image{
 		overflow:hidden;
@@ -267,7 +274,7 @@ body{
 }
 .bio{
 	color: $grayLight;
-	font-size:1.2em;
+	font-size:1em;
 	padding:10px;
 	min-height:400px;
 	text-align:left;
