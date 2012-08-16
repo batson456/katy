@@ -171,6 +171,7 @@ body{
 	}
 }
 #footer_bottom{
+	border-top:1px solid $grayLight;
 	width:100%;
 	position:absolute;
 	bottom:0;
@@ -227,12 +228,13 @@ body{
 	line-height:2em;
 	.title_image{
 		overflow:hidden;
-		padding-bottom:16px;
-		background:url('photo-shadow.png') bottom center no-repeat;
-		background-size:100%;
 		width:100%;
-		margin-bottom:30px;
 	}
+}
+.image_shadow{
+	line-height:0;
+	width:100%;
+	margin-bottom:30px;
 }
 .more-button{
 	margin-top:30px;
@@ -256,8 +258,9 @@ body{
 }
 
 .who-am-i{
-	padding:5px;
-	background:#717171;
+	padding:2px;
+	background:white;
+	border:1px solid black;
 }
 .who-am-i img{
 	z-index:9999;
@@ -278,23 +281,22 @@ body{
 	padding:10px;
 	min-height:400px;
 	text-align:left;
-	img{
-		padding:4px;
-		background:white;
-		width:50%;
+	.bio_image{
+		margin-right:15px;
+		line-height:0em;
+		text-align:center;
+		position:relative;
 		float:left;
-		margin-right:5px;
-		border:1px solid black;
+		width:50%;
+		.image_shadow{
+			margin-bottom:0px;
+		}
 	}
+
 	p{
 		line-height:1.8em;
 	}
 }
-.turn-up-100{
-		background:url('turn-up-100.png') top center;
-		height:5px;
-		width:100px;
-	}
 .bio_title{
 	border-bottom:1px solid $green;
 	color:$green;

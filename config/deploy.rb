@@ -67,4 +67,7 @@ namespace :deploy do
   deploy.task :start do
      # nothing
    end
+   task :after_deploy_code, :roles => :app do
+    run "ln -sf #{deploy_to}/shared/uploads #{release_path}/pulic/uploads"
+  end
 end
