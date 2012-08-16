@@ -1,12 +1,12 @@
 
-<div id="blog_posts" class="span8">
+<div class="span8">
 
 		<% @posts.each do |post| %>
 			<div class="post_wrapper clearfix">				
 				<h3 class="blog_title"><%= post.title %></h3>
 
 				<div class="post_info">
-					Posted <%= time_ago_in_words(post.created_at) %> ago // <i class="icon-comment"></i> <%= link_to "This will be replaced by the comment count", 
+					Posted <%= time_ago_in_words(post.created_at) %> ago // <i class="icon-comment"></i> <%= link_to "PERMALINK", 
     post_path(post, :anchor => "disqus_thread"), 
     :"data-disqus-identifer" => post.id %> 
 				</div>

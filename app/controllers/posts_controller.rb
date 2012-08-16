@@ -1,21 +1,21 @@
 class PostsController < ApplicationController
-  
-  add_breadcrumb "HOME", :root_path
 
-  def index
-    require "html_truncator"
-  	@posts = Post.paginate(:page => params[:page],:per_page => 3).order('created_at DESC')
+add_breadcrumb "HOME", :root_path
 
-  	respond_to do |format|
-	    format.html  # index.html.erb
-	    format.json  { render :json => @posts }
-	  end
+def index
+  require "html_truncator"
+	@posts = Post.paginate(:page => params[:page],:per_page => 5).order('created_at DESC')
+
+	respond_to do |format|
+    format.html  # index.html.erb
+    format.json  { render :json => @posts }
   end
+end
 
-  def show
-  	@post = Post.find(params[:id])
+def show
+	@post = Post.find(params[:id])
 
-    add_breadcrumb "POST", :post_path
+  add_breadcrumb "POST", :post_path
 
   	respond_to do |format|
   		format.html # show.html.erb
@@ -46,4 +46,12 @@ class PostsController < ApplicationController
   		end
   	end
   end
+
+  def archives
+    year = params["year"].to_i
+    month = params["month"].to_i
+    time = Date.new(year,month).to_time
+    @posts = Post.where(:created_at => time..time.end_of_month).paginate(:page => params[:page],:per_page => 5).order('created_at DESC')
+  end
+
 end

@@ -171,6 +171,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   disqus (~> 1.0.4)
+  formtastic
   html_truncator (~> 0.2)
   jquery-rails
   paperclip

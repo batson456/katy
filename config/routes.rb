@@ -6,9 +6,9 @@ Katy::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  match 'admin' => 'posts#new'
-  
   resources :posts
+
+  match '/archives/:year/:month' => 'posts#archives', :as => :archives
 
   get "static_pages/about"
 

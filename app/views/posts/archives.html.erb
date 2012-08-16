@@ -1,0 +1,14 @@
+<!-- Main Blog View -->
+<% if @posts.any? %>
+	<%= render 'posts' %>
+<% else %>
+	<div id="blog_posts" class="span8">
+
+			<div class="post_wrapper clearfix">				
+				There are no posts found for this date period
+			</div>
+	</div>
+<% end %>
+<!-- / Main Blog View -->
+
+<%= render 'sidebar' %>

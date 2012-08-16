@@ -1,0 +1,49 @@
+<div id="footer">
+			
+	<div class="container">
+		<div id="footer_content" class="row">
+			<!-- Contact Form -->
+			<div class="span6">
+				<h3>Contact Me</h3>
+
+				<div id="contact_form">
+					<p>Katy Milstead</p>
+					<p>
+						<i class="icon-envelope icon-white"></i> Email : <%= mail_to "katy.milstead@yahoo.com" %>
+					</p>
+					<p>
+						<i class="icon-comment icon-white"></i> Phone : (555)555-5555
+					</p>
+					<p>
+						<i class="icon-home icon-white"></i> Address : 
+						<br>
+						123 Main Street
+						<br>
+						Plattsburgh, NY 12901
+					</p>
+				</div>
+
+			</div>
+			<!-- / Contact Form -->
+
+			<!-- Blog Archive -->
+			<div class="span6">
+				<h3>Archives</h3>
+
+				<% @post_months.sort.reverse.each do |month, posts| %>
+		    
+		    <%=link_to month.strftime("%B %Y") + " (#{posts.count})", archives_path(month.strftime("%Y"),month.strftime("%m")) %> 
+		    <% end %>
+			</div>
+			<!-- / Blog Archive -->
+
+		</div>
+	</div>
+
+</div>
+
+<div id="footer_bottom">
+	<div class="row">
+		&copy;2012 <%= link_to 'Katy Milstead', root_path %> All Rights Reserved
+	</div>
+</div>
