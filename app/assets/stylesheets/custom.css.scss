@@ -102,12 +102,13 @@ body{
 .content{
 	
 	.main{
-		padding-top:60px;
+		padding-top:30px;
 	}
 	padding-top:80px;
-	background:#fff url('type2.png') top center no-repeat;
+	background:#fbeee0 url('type2.png') top center no-repeat;
 	background-size:100%;
 	padding:30px 0 30px 0;
+
 }
 
 /**********************************************
@@ -127,7 +128,7 @@ body{
 .katy_aftermath{
 	text-align:center;
 	font-family: 'Anonymous Pro', sans-serif;
-	height:175px;
+	height:225px;
 	padding-top:5em;
 	.logo_name{
 		height:100%;
@@ -177,9 +178,6 @@ body{
 	margin-top:-90px;
 }
 .blog_title{
-	color:$green;
-}
-.blog_title{
 	font-size:2em;
 }
 @media (max-width: 480px) {
@@ -207,10 +205,9 @@ body{
 .post_info{
 	text-transform:uppercase;
 	font-size:0.9em;
-	padding:4px 59px 0px 20px;
 	line-height: 1.94em;
 	height:32px;
-	color:$grayLight;
+	color:$gray;
 }
 .post{
 	color:$grayLight;
@@ -235,7 +232,9 @@ body{
 .more-button:hover{
 	background:#3b3b3b;
 }
-
+.pagination{
+	margin-left:20px;
+}
 /**********************************************
 * Sidebar
 **********************************************/
