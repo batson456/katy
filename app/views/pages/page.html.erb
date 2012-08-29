@@ -1,0 +1,15 @@
+<% unless @page.sidebar.empty? %>
+	<div class="span8">
+		<%= raw @page.content %>	
+	</div>
+<% else %>
+	<div class="span12">
+		<%= raw @page.content %>
+	</div>
+<% end %>
+
+<% unless @page.sidebar.empty? %>
+	<div class="span4">
+		<%= raw @page.sidebar %>
+	</div>
+<% end %>

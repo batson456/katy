@@ -1,5 +1,7 @@
 Katy::Application.routes.draw do
 
+  get "page/:page" => "pages#page", :as => :page
+
   mount Ckeditor::Engine => "/ckeditor"
 
   ActiveAdmin.routes(self)
