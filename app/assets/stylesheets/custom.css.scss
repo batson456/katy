@@ -10,6 +10,7 @@ $red:#A92F41;
 @import "bootstrap-responsive";
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 .center{
 	text-align:center;
@@ -86,11 +87,12 @@ a{
 	color:$grayLight;
 }
 a:hover{
-	color:black;
+	color:$grayLighter;
 }
 body{
+	background:#000 url('background.jpg') no-repeat top center;
+	background-color:#100E0B;
 	font-family: 'Karla', sans-serif;
-	background:#000 url('background.jpeg') top center;
 	background-size:100%;
 	background-repeat:no-repeat;
 }
@@ -104,11 +106,10 @@ body{
 	.main{
 		padding-top:30px;
 	}
-	padding-top:80px;
-	background:#fbeee0 url('type2.png') top center no-repeat;
-	background-size:100%;
-	padding:30px 0 30px 0;
+	padding-top:150px;
 
+}
+.wrapper{
 }
 
 /**********************************************
@@ -116,41 +117,38 @@ body{
 **********************************************/
 
 #header{
+	border-top:2px solid white;
+	border-bottom:2px solid white;
+	width:100%;
+	font-family: 'Amatic SC', cursive;
+	font-size:5em;
+	line-height:3em;
+	margin:50px 0 100px 0;
 	color:$grayLighter;
-	background:transparent;
+	background:url('header_bg.png');
 	margin-bottom:30px;
-}
-
-.logo{
-	width:20em;
-}
-
-.katy_aftermath{
-	text-align:center;
-	font-family: 'Anonymous Pro', sans-serif;
-	height:225px;
-	padding-top:5em;
-	.logo_name{
-		height:100%;
-		font-size:3em;
-		line-height:1em;
+	height:200px;
+	.sub_logo{
+		font-size:0.4em;
 	}
-	.sub_header{
-		text-shadow:3px 3px $dark;
-		font-style:italic;
-		font-size:1.5em;
-		line-height:0.75em;
-		margin-top:-1em;
+}
+#navigation{
+	display:block;
+	margin-top:0.8em;
+	line-height:0;
+	text-align:right;
+	li{
+		line-height:1em;
+		font-size:0.5em;
 	}
 }
 #footer{
 	position:relative;
 	padding-top:30px;
-	background:#272727 url('type2.png') top center no-repeat;
 	background-size:100%;
 	width:100%;
 	margin-bottom:0;
-	color:$grayLighter;
+	color:$grayLight;
 	a:hover{
 		color:white;
 		text-decoration:none;
@@ -174,14 +172,13 @@ body{
 /**********************************************
 * Blog and related views
 **********************************************/
-.breadcrumb{
-	margin-top:-90px;
-}
 .blog_title{
 	font-size:2em;
+	color:$grayLighter;
 }
 @media (max-width: 480px) {
 	.blog_title{
+		color:$grayLighter;
 		height:20px;
 		line-height:20px;
 	}
@@ -192,11 +189,11 @@ body{
 		height:65px;
 		line-height:65px;
 		background:url('postflag.png') 95% top  no-repeat;
-		border-top:1px solid $grayLight;
+		border-top:1px solid $grayLighter;
 	}
 }
 .post_wrapper{
-	padding:20px;
+
 	margin-bottom:50px;
 	position:relative;
 
@@ -207,10 +204,10 @@ body{
 	font-size:0.9em;
 	line-height: 1.94em;
 	height:32px;
-	color:$gray;
+	color:$grayLighter;
 }
 .post{
-	color:$grayLight;
+	color:$grayLighter;
 	font-size:1em;
 	line-height:2em;
 	.title_image{
@@ -240,11 +237,9 @@ body{
 **********************************************/
 
 #blog_sidebar{
-	padding-top:20px;
-	padding-left:20px;
-	background:url('image_shadow.png') top left no-repeat;
+	background-color:#100E0B;
 	text-align:center;
-	margin-right:30px;
+	
 }
 
 .who-am-i{
