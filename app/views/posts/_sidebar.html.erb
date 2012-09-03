@@ -2,28 +2,28 @@
 <div class="span4 hidden-phone">
 
 	<div id="blog_sidebar">
-		<div class="who-am-i">
-			<%= image_tag('cartoon.jpeg') %>
-			<div class="name">Katy Milstead</div>
-		</div>
-		<div class="image_shadow"> 
-			<%= image_tag('bio-shadow.png') %>
-		</div>
-	<div class="bio">
-		<h4 class="bio_title">About Me</h4>
-				<div class="bio_image">
-					<%= image_tag 'me.jpeg' %>
-				</div>
-				<p>
-					My name is Katy, I'm a 23 year old living in very upstate New York. This is my blog to enter in weird shit that comes to my mind through out the day, mostly of which is thought of in the shower. 
-				</p>
-
-				<p>
-					Feel free to browse along, laugh at me, laugh with me, and hopefully brighten up your day. Head to my contact page if you want to email me or leave me love notes and shit. Thanks for stopping by! 
-				</p>
+		<div class="bio">
+			<h3>Who Am I?</h3>
+			<div class="bio_image">
+				<%= image_tag 'me.jpeg' %>
+			</div>
+			<p>
+				My name is Katy, I'm a 23 year old living in very upstate New York. This is my blog to enter in weird shit that comes to my mind through out the day, mostly of which is thought of in the shower. 
 			</p>
-	</div>
 
+			<p>
+				Feel free to browse along, laugh at me, laugh with me, and hopefully brighten up your day. Head to my contact page if you want to email me or leave me love notes and shit. Thanks for stopping by! 
+			</p>
+		</div>
+
+	</div>
+	<div id="archives">
+		<h3>Archives</h3>
+
+				<% @post_months.sort.reverse.each do |month, posts| %>
+
+		    <%=link_to month.strftime("%B %Y") + " (#{posts.count})", archives_path(month.strftime("%Y"),month.strftime("%m")) %>
+		    <% end %>
 	</div>
 
 </div><!-- / Sidebar -->
