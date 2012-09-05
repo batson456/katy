@@ -171,7 +171,7 @@ GEM
     warden (1.2.1)
       rack (>= 1.0)
     will_paginate (3.0.3)
-    zurb-foundation (3.0.9)
+    zurb-foundation (3.0.8)
       compass (>= 0.12.2)
       modular-scale (>= 1.0.2)
       rake
