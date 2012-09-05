@@ -12,7 +12,7 @@ Katy::Application.routes.draw do
 
   match '/archives/:year/:month' => 'posts#archives', :as => :archives
 
-  match 'static_pages/about' => 'static_pages#about'
+  match 'about' => 'static_pages#about'
 
   get "static_pages/contact"
 
