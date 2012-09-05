@@ -1,8 +1,17 @@
-<div id="blog_posts" class="span8">
+<div id="blog_posts" class="eight columns">
 
-			<div class="post_wrapper">
+			<div class="content">
 				
 				<h3 class="blog_title"><%= @post.title %></h3>
+
+				<div class="date">
+					<span class="day">
+						<%= @post.created_at.strftime("%d") %>
+					</span> 
+					<span class="month">
+						<%= @post.created_at.strftime("%b") %>
+					</span>
+				</div>
 
 				<div class="post_info">
 					Posted <%= time_ago_in_words(@post.created_at) %> ago // <i class="icon-comment"></i> <%= link_to("Permalink", post_path(@post, :anchor => "disqus_thread"))%> 
@@ -11,9 +20,6 @@
 				<div class="post">
 					<% if @post.image? %>
 						<%= link_to image_tag(@post.image.url(:small), :class => 'title_image'), @post %>
-						<div class="image_shadow">
-							<%= image_tag('photo-shadow.png') %>
-						</div>
 					<% end %>
 					<div class="post_content">
 						<%= raw @post.content %>

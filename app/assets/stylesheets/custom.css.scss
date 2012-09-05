@@ -1,13 +1,12 @@
 $gray: #151515;
 $grayLight: #999;
 $grayLighter: #eee;
-$green: #43442b;
+$green: #5c895e;
 $darkOrange: #F2A000;
 $dark:#292929;
 $red:#A92F41;
+$orange:#5c895e;
 
-@import "bootstrap";
-@import "bootstrap-responsive";
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700);
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC);
@@ -17,63 +16,16 @@ $red:#A92F41;
 }
 
 /**********************************************
-* Shadows
-**********************************************/
-.raised {
-    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -moz-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-
-.drop-shadow {
-  position:relative;
-  float:left;
-  width:40%;
-  padding:1em;
-  margin:2em 10px 4em;
-  background:#fff;
-  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-
-.drop-shadow:before,
-.drop-shadow:after {
-  content:"";
-  position:absolute;
-  z-index:-2;
-}
-
-.drop-shadow p {
-  font-size:16px;
-  font-weight:bold;
-}
-
-.curved:before {
-  top:10px;
-  bottom:10px;
-  left:0;
-  right:50%;
-  -webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
-  -moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
-  box-shadow:0 0 15px rgba(0,0,0,0.6);
-  -moz-border-radius:10px / 100px;
-  border-radius:10px / 100px;
-}
-
-.curved-vt-2:before {
-  right:0;
-}
-.turnup{
-	height:9px;
-	background:url('turn-up.png') top center;
-	background-size:100%;
-	margin-bottom:20px;
-}
-/**********************************************
 * Typography
 **********************************************/
 
+h5{
+	color:$green;
+	border-bottom:1px solid white;
+	width:100%;
+	padding-bottom:10px;
+	padding-top:50px;
+}
 
 /**********************************************
 * Links and overrides
@@ -90,78 +42,68 @@ a:hover{
 	color:$grayLighter;
 }
 body{
-	background:black;
-	color:$grayLighter;
+	color:#eee;
 	font-family: 'Karla', sans-serif;
-}
-.wrapper{
-	background:black url('background.jpg') no-repeat top center;
+	background:black url('background2.jpg') no-repeat top center;
 	background-size:100%;
 	background-repeat:no-repeat;
-	border:1px solid white;
+	background-attachment:fixed;
+}
+.clear{
+	clear:left;
+	display:block;
 }
 
-.border{
-	border:1px solid black;
-}
-
-.content{
-
-	.main{
-		padding-top:30px;
-	}
-	padding-top:150px;
-
-}
-.wrapper{
-}
 
 /**********************************************
 * header
 **********************************************/
 
 #header{
-	border-top:2px solid white;
-	border-bottom:2px solid white;
-	width:100%;
-	font-family: 'Amatic SC', cursive;
-	font-size:5em;
-	line-height:3em;
-	margin:50px 0 100px 0;
 	color:$grayLighter;
-	background:url('header_bg.png');
-	margin-bottom:30px;
-	height:200px;
-	.sub_logo{
-		font-size:0.4em;
-	}
-}
-#navigation{
-	display:block;
-	margin-top:0.8em;
-	line-height:0;
-	text-align:right;
-	li{
-		line-height:1em;
-		font-size:0.5em;
-	}
-}
-#footer{
-  border-top:1px solid white;
 	position:relative;
-	padding:20px 0 20px 0;
-	width:100%;
+	margin-bottom:100px;
+	height:150px;
+	background:url(content_bg.png);
+	.logo{
+		position:absolute;
+	}
+	.navigation{
+		width:100%;
+		display:block;
+		height:150;
+		text-align:right;
+		padding-right:50px;
+		li{
+			height:150px;
+			line-height:150px;
+			width:100px;
+			text-align:center;
+			color:white;
+			font-size:1.4em;
+			display:inline-block;
+			a{
+				color:$grayLight;
+			}
+		}
+	}
+}
+
+#footer{
+	margin:20px 0;
+	position:relative;
+	padding:20px;
 	color:$grayLight;
 	p{
-		line-height:100%;
+		line-height:40px;
 	}
 }
 #social{
-	height:100%;
+	float:right;
+	height:50px;
 	li{
-		display:inline;
+		display:inline-block;
 		margin:5px;
-		line-height:100%;
 	}
 	li img:hover{
 		opacity:0.6;
@@ -171,30 +113,47 @@ body{
 /**********************************************
 * Blog and related views
 **********************************************/
-.blog_title{
-	font-size:2em;
-	color:$grayLighter;
+.blog_title, .blog_title a{
+	font-size:1.2em;
+	color:$green;
 }
 @media (max-width: 480px) {
-	.blog_title{
-		color:$grayLighter;
+	.blog_title, .blog_title a{
+		color:$green;
 		height:20px;
 		line-height:20px;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1400px) {
-	.blog_title{
-		height:65px;
-		line-height:65px;
-		background:url('postflag.png') 95% top  no-repeat;
-		border-top:1px solid $grayLighter;
-	}
-}
-.post_wrapper{
-
+.content{
+	background:url(content_bg.png);
 	margin-bottom:50px;
+	padding:20px;
 	position:relative;
+	.date{
+		position:absolute;
+		text-align:center;
+		left:-65px;
+		top:50px;
+		background:url(date_bg.png);
+		color:white;
+		width:65px;
+		height:65px;
+	}
+	.day{
+		display:block;
+		margin:5px;
+		border-bottom:1px solid white;
+		color:white;
+		height:49%;
+		font-size:1.5em;
+	}
+	.month{
+		display:block;
+		height:50%;
+		width:100%;
+		font-size:1.5em;
+	}
 
 }
 
@@ -206,27 +165,37 @@ body{
 	color:$grayLighter;
 }
 .post{
+	margin-top:30px;
+	margin-bottom:60px;
 	color:$grayLighter;
 	font-size:1em;
 	line-height:2em;
 	.title_image{
+		margin:1px;
+		padding:5px;
+		background:white;
+		outline:1px solid $grayLight;
 		overflow:hidden;
 		width:100%;
 	}
 }
-.image_shadow{
-	line-height:0;
-	width:100%;
-	margin-bottom:30px;
-}
+
 .more-button{
-	margin-top:30px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	margin:30px 20px 20px 0;
+	opacity:0.8;
+	padding:5px;
 	border-bottom-left-radius:10px;
 	border-top-right-radius:10px;
-	font-size:1.3em;
+	font-size:1.6em;
+	background:$green;
+	color:white;
 }
 .more-button:hover{
-	background:#3b3b3b;
+	color:white;
+	opacity:1;
 }
 .pagination{
 	margin-left:20px;
@@ -235,31 +204,11 @@ body{
 * Sidebar
 **********************************************/
 
-#blog_sidebar{
-	text-align:center;
-
-}
-
-.who-am-i{
-	padding:2px;
-	background:white;
-	border:1px solid black;
-}
-.who-am-i img{
-	z-index:9999;
-}
-.who-am-i .name{
-	font-size:20px;
-	line-height:20px;
-	margin-top:-30px;
-	color:white;
-	background:$dark;
-	opacity:0.7;
-	height:30px;
-
+.sidebar{
+	background:url(content_bg.png);
+	padding:20px;
 }
 .bio{
-	color: $grayLight;
 	font-size:1em;
 	text-align:left;
 	.bio_image{

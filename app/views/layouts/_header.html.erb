@@ -1,18 +1,16 @@
-	<div id="header">
-		<div class="container">
-			<div class="row">
-				<div class="span8"><span class="sub_logo">A look inside the insanity that is...</span>
-					Katy Aftermath
-				</div>
-				<div class="span4">
-					<ul id="navigation">
-						<li><%= link_to 'Home', root_path %></li>
-							<% @pages_all.each do |page| %>
-								<li><%= link_to page.name, page_url(:page => page.name) %></li>
-							<% end %>
-					</ul>
-				</div>
-			</div>
+<div id="header">
+	<div class="row">
+		<div class="four columns">
+			<%= image_tag "logo_bg.png", :class => 'logo' %>
+		</div>
+		<div class="eight columns">
+			<ul class="navigation">
+				<%= nav_link 'Home', root_path %>
+					<% @pages_all.each do |page| %>
+						<%= nav_link page.name, page_url(:page => page.name) %>
+					<% end %>
+			</ul>
 		</div>
 	</div>
+</div>
 

@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
-gem 'bootstrap-sass', '~> 2.0.4.0'
 gem 'will_paginate', '~> 3.0'
 gem 'formtastic'
 gem "html_truncator", "~>0.2"
@@ -29,6 +28,8 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails', '~> 1.0.3'
+  gem 'zurb-foundation', '~> 3.0.9'
 end
 
 gem 'jquery-rails'

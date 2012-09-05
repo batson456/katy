@@ -11,7 +11,7 @@
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 	
 	<!-- Set the viewport width to device width for mobile -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<title><%= content_for?(:title) ? yield(:title) : "Katy Aftermath" %></title>
   
@@ -24,25 +24,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="wrapper container">
+	<div class="wrapper row">
 
-		<%= render :partial => 'layouts/header' %>
+	<%= render :partial => 'layouts/header' %>
 
-		<!-- Begin Content -->
-
-		<div class="content container">
-			<!-- Main View -->
-			<div class="container main">
-				<div class="row">
-					
-	  		<%= yield %>
-				</div>
-	  	</div><!-- / Main View -->
-		</div>
-
-		<%= render :partial => 'layouts/footer' %>
+		<!-- Main View -->
+			<div class="row">
+				
+  		<%= yield %>
+  		
+			</div>
 
 	</div>
+
+	<%= render :partial => 'layouts/footer' %>
 
 </body>
 </html>

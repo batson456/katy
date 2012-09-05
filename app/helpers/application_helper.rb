@@ -22,4 +22,13 @@ module ApplicationHelper
   def page_navigation_links(pages)
     will_paginate(pages, :class => 'pagination', :inner_window => 2, :outer_window => 0, :renderer => BootstrapLinkRenderer, :previous_label => '&larr;'.html_safe, :next_label => '&rarr;'.html_safe)
   end
+
+  def nav_link(link_text, link_path)
+    class_name = current_page?(link_path) ? 'active' : ''
+
+    content_tag(:li, :class => class_name) do
+      link_to link_text, link_path
+    end
+  end
+
 end

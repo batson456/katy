@@ -1,9 +1,14 @@
 <!-- Sidebar -->
-<div class="span4 hidden-phone">
+<div class="four columns">
 
-	<div id="blog_sidebar">
+	<div class="sidebar">
+		<div class="who-am-i">
+			<img alt="Cartoon" src="/assets/cartoon-ec98928480b2ad52cd1c95338436c4c7.jpeg" />
+			<div class="name">Katy Milstead</div>
+		</div>
+		<!--
 		<div class="bio">
-			<h3>Who Am I?</h3>
+			<h5>Who Am I?</h5>
 			<div class="bio_image">
 				<%= image_tag 'me.jpeg' %>
 			</div>
@@ -15,15 +20,36 @@
 				Feel free to browse along, laugh at me, laugh with me, and hopefully brighten up your day. Head to my contact page if you want to email me or leave me love notes and shit. Thanks for stopping by! 
 			</p>
 		</div>
+		-->
+		<div id="archives">
+			<h5>Archives</h5>
 
-	</div>
-	<div id="archives">
-		<h3>Archives</h3>
+					<% @post_months.sort.reverse.each do |month, posts| %>
 
-				<% @post_months.sort.reverse.each do |month, posts| %>
+			    <%=link_to month.strftime("%B %Y") + " (#{posts.count})", archives_path(month.strftime("%Y"),month.strftime("%m")) %>
+			    <% end %>
+		</div>
 
-		    <%=link_to month.strftime("%B %Y") + " (#{posts.count})", archives_path(month.strftime("%Y"),month.strftime("%m")) %>
-		    <% end %>
+		<div id="contact_me">
+			<h5>Contact Me</h5>
+			<div id="contact_form">
+				<p>Katy Milstead</p>
+				<p>
+					<i class="icon-envelope icon-white"></i> Email : <a href="mailto:katy.milstead@yahoo.com">katy.milstead@yahoo.com</a>
+				</p>
+				<p>
+					<i class="icon-comment icon-white"></i> Phone : (555)555-5555
+				</p>
+				<p>
+					<i class="icon-home icon-white"></i> Address : 
+					<br>
+					123 Main Street
+					<br>
+					Plattsburgh, NY 12901
+				</p>
+			</div>
+		</div>
+
 	</div>
 
 </div><!-- / Sidebar -->
