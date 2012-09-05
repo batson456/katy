@@ -6,6 +6,7 @@
 		<div class="eight columns">
 			<ul class="navigation">
 				<%= nav_link 'Home', root_path %>
+				<%= nav_link 'About Me', about_path %>
 					<% @pages_all.each do |page| %>
 						<%= nav_link page.name, page_url(:page => page.name) %>
 					<% end %>
