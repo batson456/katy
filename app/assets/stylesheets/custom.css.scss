@@ -43,7 +43,7 @@ a:hover{
 }
 body{
 	color:#eee;
-	font-family: 'Karla', sans-serif;
+	font-family: 'arial', sans-serif;
 	background:black url('background2.jpg') no-repeat top center;
 	background-size:100%;
 	background-repeat:no-repeat;
@@ -211,18 +211,15 @@ body{
 .bio{
 	font-size:1em;
 	text-align:left;
-	.bio_image{
-		margin-right:15px;
-		line-height:0em;
-		text-align:center;
-		position:relative;
-		float:left;
-		width:50%;
-		.image_shadow{
-			margin-bottom:0px;
-		}
+	h6,h2{
+		color:$green;
 	}
-
+	h3{
+		text-align:center;
+	}
+	h6{
+		border-bottom:1px solid $green;
+	}
 	p{
 		line-height:1.8em;
 	}
