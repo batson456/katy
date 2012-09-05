@@ -70,9 +70,9 @@ warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-m
 CFLAGS   = -fno-common $(cflags)  -fno-common -pipe $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/Users/batson456/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags) -I/usr/include
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/Users/batson456/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags) -I/Library/PostgreSQL/9.1/include
 CXXFLAGS = $(CFLAGS) $(cxxflags)
-ldflags  = -L.  -L/usr/lib
+ldflags  = -L.  -L/Library/PostgreSQL/9.1/lib
 dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)

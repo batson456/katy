@@ -21,6 +21,6 @@ test:
 production:
   adapter: postgresql
   database: katy
-  username: deploy
+  username: postgres
   password: britney12 
   host: localhost
