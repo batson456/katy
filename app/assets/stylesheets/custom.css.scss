@@ -206,11 +206,15 @@ body{
 	margin-left:20px;
 }
 .like-buttons{
-	height:100px;
+	height:44px;
 	border-top:1px solid $grayLight;
 	border-bottom:1px solid $grayLight;
-	line-height:100px;
+	padding-top:6px;
 	text-align:right;
+	.share_this{
+		line-height:44px;
+		padding-top:0px;
+	}
 }
 /**********************************************
 * Sidebar
