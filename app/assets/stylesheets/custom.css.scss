@@ -36,10 +36,10 @@ ul{
 	list-style:none;
 }
 a{
-	color:$grayLight;
+	color:#eee;
 }
 a:hover{
-	color:$grayLighter;
+	color:$grayLight;
 }
 body{
 	color:#eee;
@@ -212,6 +212,25 @@ body{
 .sidebar{
 	background:url(content_bg.png);
 	padding:20px;
+}
+.who-am-i{
+  padding:2px;
+  background:white;
+  border:1px solid black;
+}
+.who-am-i img{
+  z-index:9999;
+}
+.who-am-i .name{
+	text-align:center;
+  font-size:20px;
+  line-height:20px;
+  margin-top:-30px;
+  color:white;
+  background:$dark;
+  opacity:0.7;
+  height:30px;
+
 }
 .bio{
 	font-size:1em;

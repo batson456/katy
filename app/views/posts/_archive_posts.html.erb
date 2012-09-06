@@ -1,0 +1,37 @@
+
+<div class="eight columns">
+
+		<% @posts.each do |post| %>
+			<div class="content clearfix">				
+				<h3 class="blog_title"><%= link_to post.title, post %></h3>
+				<div class="date">
+					<span class="day">
+						<%= post.created_at.strftime("%d") %>
+					</span> 
+					<span class="month">
+						<%= post.created_at.strftime("%b") %>
+					</span>
+				</div>
+				<div class="post_info">
+					Posted <%= time_ago_in_words(post.created_at) %> ago // <i class="icon-comment icon-white"></i> <%= link_to "PERMALINK", 
+    post_path(post, :anchor => "disqus_thread"), 
+    :"data-disqus-identifer" => post.id %> 
+				</div>
+
+				<div class="post">
+					<% if post.image? %>
+						<%= link_to image_tag(post.image.url(:small), :class => 'title_image'), post%>
+					<% end %>
+					<div class="post_content">
+						<%= raw HTML_Truncator.truncate(post.content, 125) %>
+					</div>
+				</div>
+
+				<%= link_to 'MORE', post, :class => 'btn btn-small btn-inverse more-button' %>
+
+			</div>
+		<% end %>
+			<%= will_paginate @posts %>
+	
+			<%= raw(disqus_comment_counts) %>
+</div>
